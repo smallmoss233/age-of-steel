@@ -15,6 +15,8 @@ public class AOSSounds {
     public static final SoundEvent MONDAS_STOMP3 = register("entity/mondas_stomp3");
     public static final SoundEvent MONDAS_STOMP4 = register("entity/mondas_stomp4");
 
+    public static final SoundEvent SHOOT = register("entity/shoot");
+
     public static void init() {
     }
 

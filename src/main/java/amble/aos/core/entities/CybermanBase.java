@@ -6,6 +6,7 @@ import amble.aos.core.entities.ai.CybermanFormationGoal;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
@@ -156,6 +157,7 @@ public class CybermanBase extends Monster {
         LaserBolt bolt = new LaserBolt(this.level(), this);
         bolt.setPos(origin.x, origin.y, origin.z);
         bolt.shoot(aim, 1.6F);
+        this.playSound(AOSSounds.SHOOT, 1, Mth.randomBetween(this.random, 7, 10) * 0.1f);
         this.level().addFreshEntity(bolt);
     }
 
